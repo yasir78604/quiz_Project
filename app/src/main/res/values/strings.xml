@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">quiz Project</string>
+    <string name="correct_text">Correct!</string>
+    <string name="incorrect_text">Incorrect!</string>
+    <string name="first_score_text">0/10</string>
+    <string name="correct_toast_message">Great!</string>
+    <string name="Incorrect_toast_message">Not Good!</string>
+
+    <string name="q1">The Hawaiian alphabet has only 12 letters.</string>
+    <string name="q2">Animals that lay eggs don\'t have belly buttons.</string>
+    <string name="q3">A ball of glass will bounce higher than a ball of rubber.</string>
+    <string name="q4">1/4 of the bones in your body are in your feet.</string>
+    <string name="q5">You blink over 10,000,000 times a year.</string>
+    <string name="q6">A sneeze travels out of your mouth at over 100 miles an hour.</string>
+    <string name="q7">Strawberries contain more vitamin C than oranges.</string>
+    <string name="q8">The longest one-syllable word is "screeched."</string>
+    <string name="q9">You share your birthday with at least 9 million other people in the world.</string>
+    <string name="q10">No piece of paper can be folded more than seven times.</string>
+
 </resources>
