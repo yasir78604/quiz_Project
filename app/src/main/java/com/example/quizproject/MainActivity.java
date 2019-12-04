@@ -1,7 +1,9 @@
 package com.example.quizproject;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView txtQuestion , txtQues;
     private ProgressBar progressBar;
     private int mUserValue;
+    private int no;
 
 
     private int mQuestionIndex;
@@ -65,12 +68,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void changeButton(){
+        no++;
         mQuestionIndex +=1;
         mQuestionIndex = mQuestionIndex % 10;
+        if (mQuestionIndex == 0){
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            alert.setTitle("The quiz is Finished");
+            alert.setMessage("The Score is " + mUserValue);
+            alert.setPositiveButton("Finish the quiz", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+            });
+            alert.show();
+        }
         QuizModel model = quizModels[mQuestionIndex];
         txtQuestion.setText(model.getmQuestion());
         progressBar.incrementProgressBy(incPro);
-        txtQues.setText(mUserValue + " / 10");
+        txtQues.setText(no + " / 10");
     }
 
     public void intiWidget(){
