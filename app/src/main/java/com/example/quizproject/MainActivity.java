@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
             alert.show();
+            alert.setCancelable(false);
         }
         QuizModel model = quizModels[mQuestionIndex];
         txtQuestion.setText(model.getmQuestion());
